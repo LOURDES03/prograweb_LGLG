@@ -1,0 +1,44 @@
+/*este es para darle tamaño y color a la pagina*/
+.login-container { 
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: #f533a498;
+  }
+  
+  
+/* este es para colocarle color al titulo y margen al card */
+  .login-form {
+    background-color: #000000a9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(174, 0, 255);
+    text-align: center;
+  }
+  
+  /*este es para ponerle grosor al titulo*/
+  .login-form h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /*este es para el los cuadros de texto (email y password) tamaño*/
+  .login-form mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  
+  /*este es para darle tamaño y color al boton*/
+  .login-form button {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: rgb(185, 136, 214);
+  }
+  
+  .icon {
+    float: left;
+    margin-right: 1;
+  }

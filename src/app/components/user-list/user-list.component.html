@@ -1,0 +1,27 @@
+
+
+<div class="menu-container">
+    <button mat-raised-button (click)="cerrarSesion()">Cerrar Sesión</button>
+</div>
+
+<div class="table-container">
+    <h3>LISTA DE USUARIOS</h3>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.role }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

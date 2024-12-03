@@ -1,0 +1,65 @@
+/* diseño para el boton de cerrar sesion */
+.menu-container {
+    position: fixed; 
+    top: 20px;
+    right: 20px; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* diseño para la tabla */
+.table-container {
+    display: flexbox;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; /* Centra tanto el título como la tabla */
+    height: 100vh; 
+    margin: 0 15px; 
+}
+
+/* Estilo del título de la tabla  */
+.table-container h3 {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 20px; 
+    text-align: center;
+    text-transform: uppercase; 
+    letter-spacing: 2px;
+}
+
+
+/* Diseño general de la tabla */
+.table {
+    font-size: 1.1rem; /* Tamaño de texto */
+    font-family: 'Arial', sans-serif; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    width: 50%; 
+    margin-top: 20px; 
+    
+}
+
+/* Estilo del encabezado */
+.table-dark th {
+    background-color: #e06feb; /* Color de fondo azul */
+    color: white; /* Texto blanco */
+    text-align: center; /* Alineación centrada */
+    font-size: 1.2rem; /* Fuente más grande en el encabezado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+
+/* Alineación y espaciado de celdas */
+.table td, .table th {
+    vertical-align: middle; /* Centrado vertical de las celdas */
+    padding: 1rem; /* Espaciado dentro de las celdas */
+    text-align: center; /* Alineación centrada de los textos */
+}
+
+/* Estilo de las filas de la tabla */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #c48beb; /* Fondo gris claro para las filas impares */
+}
+
+

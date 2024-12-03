@@ -1,27 +1,25 @@
-# Examen
+# DESARROLLO DE LA PRACTICA
+LOPEZ GARCIA LOURDES GLORIA
+El login solicita al usuario ingresar nombre del usuario, correo electronico y contraseña, estos datos seran validados usando una API de terceros. Si los datos coinciden se ingresara a la ventana de inicio de lo contrario se arrojara una alerta que indicara datos invalidos 
+![image](https://github.com/user-attachments/assets/95b4a842-f6cb-4b10-92f2-df59cc3613e7)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+## Api a utilizar
+API pública: https://api.escuelajs.co/api/v1/users
+![image](https://github.com/user-attachments/assets/3cd790f7-b5f9-41c1-a5d5-21e21f274841)
 
-## Development server
+## Crea la tabla de la lista de usuarios
+Se agrega solo los datos que se le asignan para que aparezca
+![image](https://github.com/user-attachments/assets/eea7c2c0-5183-4792-8e9d-acbfd755a181)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Login
+Se configura de esta manera para agregar el ulm de la api y poder ingresar
+![image](https://github.com/user-attachments/assets/69b32fac-594c-42d2-a1b2-f9dc73ed7118)
+![image](https://github.com/user-attachments/assets/8ca0c2c6-74d0-4b29-b161-4526c98026c4)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Inicio
+![image](https://github.com/user-attachments/assets/14768a9f-530b-4096-809b-b980889f769c)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

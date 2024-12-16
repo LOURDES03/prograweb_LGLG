@@ -44,7 +44,7 @@ export class LogComponent {
           );
           if (user) {
             // Redirige al usuario si los datos coinciden
-            this.router.navigate(['/user-list']);
+            this.router.navigate(['/menu']);
           } else {
             // Muestra un mensaje si las credenciales no son válidas
             this.snackBar.open('Datos inválidos', 'Cerrar', { duration: 3000 });

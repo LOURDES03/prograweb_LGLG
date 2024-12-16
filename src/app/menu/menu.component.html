@@ -1,0 +1,84 @@
+
+
+<h1>Lista de personajes "Serie de Rick and Morty</h1>
+<!-- botones del menu -->
+<div class="menu-container">
+    <input type="text"
+        class="form-control mb-2"
+        placeholder="Buscar"
+        #txtSearch
+        (keyup)="mostrarComponente( txtSearch.value )" >
+
+    <button  mat-raised-button color="primary" (click)="mostrarComponente('tablas')">Tabla</button>
+    <button mat-raised-button color="primary" (click)="agregar()">Agregar</button>
+    <button mat-raised-button color="primary" (click)="actualizar()">Actualizar</button>
+    <button mat-raised-button color="warn" (click)="cerrarSesion()">Cerrar Sesión</button>
+</div>
+
+
+<!-- mostrar la  tabla -->
+<div *ngIf="selectedComponent === 'tablas'">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Columna para el id -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id del personaje </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+
+        <!-- columna para la imagen -->
+        <ng-container matColumnDef="imagen">
+            <th mat-header-cell *matHeaderCellDef> Imagen del personaje </th>
+            <td mat-cell *matCellDef="let element">
+                <img [src]="element.image" alt="{{element.name}}" width="50" />
+            </td>
+        </ng-container>
+
+        <!-- columna para el nombre del personaje  -->
+        <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef> Nombre del personaje </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <!-- columna para los botones de accion -->
+        <ng-container matColumnDef="acciones">
+            <th mat-header-cell *matHeaderCellDef> ACCIONES </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-button color="accent" (click)="verDetallesPersonaje(element.id)">Visualizar</button>
+                <button mat-icon-button class="custom-icon-button" (click)="editCharacter(element.id)"><mat-icon>edit</mat-icon></button>
+                <button mat-button color="warn" (click)="borrarPersonaje(element.id)">Borrar</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+
+<!-- modal para el personaje -->
+
+<ng-template #detallesPersonaje let-data>
+  <div class="contenido-modal">
+    <h2>{{ data.name }}</h2>
+    <img [src]="data.image" alt="{{ data.name }}" class="imagen-modal">
+      <p><strong>ID:</strong>{{data.id}}</p>
+      <p><strong>Status:</strong> {{ data.status }}</p>
+      <p><strong>Species:</strong> {{ data.species }}</p>
+      <p><strong>Type:</strong> {{ data.type }}</p>
+      <p><strong>Gender:</strong> {{ data.gender }}</p>
+      <p><strong>Origen (nombre):</strong> {{ data.origin.name }}</p>
+      <p><strong>Origen (URL):</strong> {{data.origin.url}}</p>
+      <p><strong>Location (nombre):</strong> {{ data.location.name }}</p>
+      <p><strong>Location (url):</strong> {{ data.location.url }}</p>
+      <p><strong>Episodes:</strong></p>
+      <ul>
+        <li *ngFor="let episode of data.episode">{{ episode }}</li>
+      </ul>
+      <p><strong>URL:</strong>{{data.url}}</p>
+      <p><strong>Created:</strong> {{ data.created }}</p>      
+  </div>
+</ng-template>
+
+
+

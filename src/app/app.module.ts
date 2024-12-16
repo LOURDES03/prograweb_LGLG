@@ -17,18 +17,21 @@ import { MatMenuModule } from '@angular/material/menu';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LogComponent } from './log/log.component';
-
+import { RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 
 import { UserService } from './services/user.service';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { PersonajeEditDialogComponent } from '../app/components/personaje-edit/personaje-edit-dialog.component';
+import { MenuComponent } from "./menu/menu.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent,
-
+    UserListComponent
+    
   ],
+
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -44,8 +47,11 @@ import { UserListComponent } from './components/user-list/user-list.component';
     MatTableModule,
     MatMenuModule,
     LogComponent,
-    MatCardModule
-  ],
+    MatCardModule,
+    RouterModule.forRoot([]),
+    MenuComponent,
+    PersonajeEditDialogComponent
+],
   providers: [
     UserService,
 
